@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: #000000;
+    min-height: 100vh;
+    padding: 2rem 5%;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.nav-item {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #cccccc;
+}
+
+.nav-hover {
+    transform: scale(1.05);
+}
+
+.nav-bounce {
+    animation: navBounce 0.4s cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes navBounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-4px); }
+    50% { transform: translateY(-6px); }
+    75% { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+}
+
+.cta-button {
+    background: white !important;
+    color: black !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+}
+
+.cta-button.nav-bounce {
+    animation: ctaBounce 0.4s cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes ctaBounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-4px); }
+    50% { transform: translateY(-6px); }
+    75% { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.app-download {
+    background: white;
+    color: black;
+    border-radius: 50px;
+    padding: 0.8rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.app-download .dot {
+    color: black;
+}
+
+.app-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+.download-logo {
+    height: 24px;
+    width: auto;
+    filter: none;
+}
+
+.small-logo {
+    width: 24px;
+    height: 24px;
+}
+
+.hero-image {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.demo-video {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1024px) {
+    .hero-image {
+        max-width: 90%;
+    }
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.features h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.features h2 .bold {
+    font-weight: bold;
+}
+
+.features-description {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    color: #666;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+    box-shadow: 
+        0 0 20px rgba(128, 128, 128, 0.4),
+        0 0 40px rgba(128, 128, 128, 0.2);
+    pointer-events: none;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover h3 {
+    color: #666666;
+    transition: color 0.3s ease;
+}
+
+.feature-card h3 {
+    color: #4a4a8a;
+    margin-bottom: 1rem;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #666;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main-logo, .secondary-logo {
+    transition: transform 0.3s ease;
+}
+
+.logo-hover {
+    transform: scale(1.05);
+}
+
+.logo-bounce {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.main-logo {
+    height: 90px;
+    width: auto;
+}
+
+.secondary-logo {
+    height: 65px;
+    width: auto;
+}
+
+.logo-container img {
+    filter: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Team Section Styles */
+.team {
+    padding: 5rem 5%;
+    background: #FFFFFF;
+}
+
+.team h2 {
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 3rem;
+}
+
+.team h2 .bold {
+    font-weight: bold;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.team-member {
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.member-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .role {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.linkedin-icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.linkedin-link:hover .linkedin-icon {
+    opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 4rem 5% 2rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.footer-logo {
+    flex: 0 0 200px;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.footer-column a {
+    color: #999999;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333333;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+} 
