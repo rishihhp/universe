@@ -258,6 +258,13 @@ nav {
     gap: 1.5rem;
 }
 
+.logo-separator {
+    color: white;
+    font-size: 52px;
+    margin: 0 1rem;
+    font-weight: 200;
+}
+
 .main-logo, .secondary-logo {
     transition: transform 0.3s ease;
 }
@@ -287,6 +294,18 @@ nav {
 
 .logo-container img {
     filter: none;
+}
+
+.stanford-logo {
+    height: 45px;  /* Adjust this value to match your design */
+    width: auto;
+    filter: none;
+}
+
+@media (max-width: 768px) {
+    .main-logo, .secondary-logo {
+        height: 35px;  /* Slightly smaller on mobile */
+    }
 }
 
 html {
@@ -558,5 +577,24 @@ html {
 @media (max-width: 768px) {
     .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+.stanford-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stanford-text {
+    color: white;
+    font-size: 20px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .stanford-text {
+        display: none;
     }
 } 
