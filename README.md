@@ -5,7 +5,7 @@
 **UniVerse** is a next-generation AI-powered academic advisor built to help students navigate their college journey with confidence, clarity, and community. Think of it as your personal advisor, course planner, and peer mentor—all in one platform.
 
 > "I'm worried that I'm going to graduate and not be able to make the most of Stanford."  
-> — *Levenia Sim, Stanford University*
+> — *Anonymous, Stanford University*
 
 ---
 
@@ -25,7 +25,7 @@
 ## 🌍 Why UniVerse?
 
 > “My academic advisor screwed me. I had to stay an extra semester and pay $30K for one class.”  
-> — *Paul Oscislawski, Arizona State University*
+> — *Anonymous, Arizona State University*
 
 Students everywhere struggle with outdated advising systems, unclear course paths, and lack of mentorship. UniVerse changes that—bringing personalized, AI-driven advising to the palm of your hand.
 
@@ -45,7 +45,7 @@ Students everywhere struggle with outdated advising systems, unclear course path
 ## 💡 Testimonials
 
 > “I’ve never met my master’s advisor. I emailed her — she never responded.”  
-> — *Megan Sun, MIT*
+> — *Anonymous, MIT*
 
 > “UniVerse made me realize I was on the wrong track for my degree. I wish I had this earlier.”  
 > — *Anonymous Beta User*
